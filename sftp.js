@@ -20,7 +20,8 @@ let options = {
   dryRun: JSON.parse(core.getInput('dryRun')), // Enable dry-run mode. Default to false
   excludeMode: JSON.parse(core.getInput('excludeMode')), // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
   forceUpload: JSON.parse(core.getInput('forceUpload')), // Force uploading all files, Default to false(upload only newer files).
-  exclude: JSON.parse(core.getInput('exclude')) // exclude patterns (glob)
+  exclude: JSON.parse(core.getInput('exclude')), // exclude patterns (glob)
+  concurrency: 10
 };
 
 console.log('sftp options:', options)
