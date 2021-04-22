@@ -18,9 +18,16 @@ let config = {
 
 let options = {
   dryRun: JSON.parse(core.getInput('dryRun')), // Enable dry-run mode. Default to false
-  excludeMode: 'remove', // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
-  forceUpload: false // Force uploading all files, Default to false(upload only newer files).
+  excludeMode: JSON.parse(core.getInput('excludeMode')), // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
+  forceUpload: JSON.parse(core.getInput('forceUpload')), // Force uploading all files, Default to false(upload only newer files).
+  exclude: JSON.parse(core.getInput('exclude')) // exclude patterns (glob)
 };
+
+if (Array.isArray(options['exclude'])) {
+  options['exclude'].push('.git')
+} else {
+  options['exclude'] = ['.git']
+}
 
 deploy(config, options)
   .then(() => {
