@@ -23,11 +23,7 @@ let options = {
   exclude: JSON.parse(core.getInput('exclude')) // exclude patterns (glob)
 };
 
-if (Array.isArray(options['exclude'])) {
-  options['exclude'].push('.git')
-} else {
-  options['exclude'] = ['.git']
-}
+console.log('sftp options:', options)
 
 deploy(config, options)
   .then(() => {

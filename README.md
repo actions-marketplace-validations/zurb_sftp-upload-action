@@ -19,7 +19,7 @@ it using [sftp-sync-deploy](https://www.npmjs.com/package/sftp-sync-deploy)
   exclude: "[                     // exclude patterns (glob)
     'node_modules',
     'src/**/*.spec.ts'
-  ]",                              // Optional. Default to ['.git'].
+  ]",                              // Optional. Default to [].
 ```
 
 ## useful link
