@@ -20,7 +20,7 @@ it using [sftp-sync-deploy](https://www.npmjs.com/package/sftp-sync-deploy)
     'node_modules',
     'src/**/*.spec.ts'
   ]",                              // Optional. Default to [].
-  concurrency: 100           // Optional. Default to 100.
+  concurrency: 100                 // Optional. Default to 100.
 ```
 
 ## useful link
