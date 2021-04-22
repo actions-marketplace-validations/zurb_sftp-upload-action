@@ -21,7 +21,7 @@ let options = {
   excludeMode: JSON.parse(core.getInput('excludeMode')), // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
   forceUpload: JSON.parse(core.getInput('forceUpload')), // Force uploading all files, Default to false(upload only newer files).
   exclude: JSON.parse(core.getInput('exclude')), // exclude patterns (glob)
-  concurrency: 10
+  concurrency: JSON.parse(core.getInput('exclude'))
 };
 
 console.log('sftp options:', options)
@@ -31,6 +31,7 @@ deploy(config, options)
     console.log('sftp upload success!');
   })
   .catch(err => {
+    console.log('sftp options:', options)
     console.error('sftp upload error! ', err);
     core.setFailed(err.message)
   });
