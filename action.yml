@@ -30,6 +30,9 @@ inputs:
   exclude:
     required: false
     default: '[]'
+  concurrency:
+    required: false
+    default: 100
 runs:
   using: 'node12'
   main: 'dist/index.js'
