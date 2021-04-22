@@ -20,6 +20,15 @@ inputs:
   dryRun:
     required: false
     default: false
+  excludeMode:
+    required: false
+    default: 'remove'
+  forceUpload:
+    required: false
+    default: false
+  exclude:
+    required: false
+    default: '[]'
 runs:
   using: 'node12'
   main: 'dist/index.js'
