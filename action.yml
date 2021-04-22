@@ -1,6 +1,7 @@
 name: 'SFTP uploader w/options'
-color: 'green'
-icon: 'upload'
+branding:
+  color: 'purple'
+  icon: 'upload-cloud'
 description: 'upload files to server via SFTP'
 inputs:
   host:
