@@ -21,7 +21,7 @@ let options = {
   excludeMode: JSON.parse(core.getInput('excludeMode')), // Behavior for excluded files ('remove' or 'ignore'), Default to 'remove'.
   forceUpload: JSON.parse(core.getInput('forceUpload')), // Force uploading all files, Default to false(upload only newer files).
   exclude: JSON.parse(core.getInput('exclude')), // exclude patterns (glob)
-  concurrency: JSON.parse(core.getInput('exclude'))
+  concurrency: JSON.parse(core.getInput('concurrency'))
 };
 
 console.log('sftp options:', options)
