@@ -1,4 +1,4 @@
-name: 'SFTP uploader'
+name: 'SFTP uploader w/options'
 color: 'green'
 icon: 'upload'
 description: 'upload files to server via SFTP'
