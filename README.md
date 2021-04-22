@@ -15,6 +15,11 @@ it using [sftp-sync-deploy](https://www.npmjs.com/package/sftp-sync-deploy)
   localDir: 'dist',               // Required, Absolute or relative to cwd.
   remoteDir: '/path/to/dest'      // Required, Absolute path only.
   dryRun: false                   // Optional. Default to false.
+  excludeMode: false              // Optional. Default to remove.
+  exclude: [                      // exclude patterns (glob)
+    'node_modules',
+    'src/**/*.spec.ts'
+  ],                              // Optional. Default to ['.git'].
 ```
 
 ## useful link
